@@ -1,0 +1,14 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #fcb69f;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffecd2, #fcb69f);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffecd2, #fcb69f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: inset 0 0 80vh -10vh rgba(0,0,0,.5);
+  min-height: 100vh;
+}
+
+body {
+  background-color: transparent;
+}
