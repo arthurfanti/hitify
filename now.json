@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "hitify",
+    "name": "express",
     "builds": [
         { "src": "app.js", "use": "@now/node" },
 	{ "src": "routes/*.js", "use": "@now/node" },
