@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 var querystring = require('querystring');
 
-var client_id = 'e3ac6b36700045bd98c140a4dc357a35'; // Your client id
-var client_secret = '27eda6115bb0403b9974c9bb2e6438ed'; // Your secret
+var client_id = '89921de5e8e04e09ae6aeaf5c29ea10f'; // Your client id
+var client_secret = '8a44b76a454147feb017d2fb424ff0d3'; // Your secret
 var redirect_uri = 'http://localhost:3000/callback'; // Your redirect uri
 var stateKey = 'spotify_auth_state';
 

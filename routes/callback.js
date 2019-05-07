@@ -3,8 +3,8 @@ var router = express.Router();
 var querystring = require('querystring');
 var request = require('request');
 
-var client_id = 'e3ac6b36700045bd98c140a4dc357a35'; // Your client id
-var client_secret = '27eda6115bb0403b9974c9bb2e6438ed'; // Your secret
+var client_id = '89921de5e8e04e09ae6aeaf5c29ea10f'; // Your client id
+var client_secret = '8a44b76a454147feb017d2fb424ff0d3'; // Your secret
 var redirect_uri = 'http://localhost:3000/callback'; // Your redirect uri
 var stateKey = 'spotify_auth_state';
 
@@ -18,11 +18,13 @@ router.get('/', function(req, res, next) {
   var storedState = req.cookies ? req.cookies[stateKey] : null;
 
   if (state === null || state !== storedState) {
+    console.log('null')
     res.redirect('/#' +
-      querystring.stringify({
-        error: 'state_mismatch'
-      }));
+    querystring.stringify({
+      error: 'state_mismatch'
+    }));
   } else {
+    console.log('not null')
     res.clearCookie(stateKey);
     var authOptions = {
       url: 'https://accounts.spotify.com/api/token',
@@ -38,7 +40,9 @@ router.get('/', function(req, res, next) {
     };
 
     request.post(authOptions, function(error, response, body) {
+      console.log('posting')
       if (!error && response.statusCode === 200) {
+        console.log('not error')
 
         var access_token = body.access_token,
             refresh_token = body.refresh_token;
