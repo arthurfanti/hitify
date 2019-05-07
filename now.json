@@ -4,7 +4,7 @@
     "builds": [
         { "src": "app.js", "use": "@now/node" },
 	{ "src": "routes/*.js", "use": "@now/node" },
-	{ "src": "client/**/*.js", "use": "@now/next },
+	{ "src": "client/**/*.js", "use": "@now/next" },
     ],
     "routes": [
 	{ "src": "/", "dest": "/routes/index.js" },
